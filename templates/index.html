@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Lovely Garden State</title>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.3/dist/leaflet.css"
+    integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
+    crossorigin="" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Kalam:700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../static/css/style.css" />
+</head>
+<style>
+
+</style>
+
+<body>
+  <div class="row">
+    <div class="col-8" id="header">
+      <h1 id="heading">A Guide to the Garden State</h1>
+      <h1 id="sub-heading">"Find your exit!"</h1>
+    </div>
+    <div class="col-4">
+      <img id="img-welcome" src="../static/images/Welcome.jpg">
+    </div>
+  </div>
+
+  <div class="row" style="height: 1500px">
+    <div class="col-5">
+      <h2 id="caption">Click a County on the map to view data:</h2>
+      <div id="map">
+      </div>
+    </div>
+
+    <div class="col-7" style="text-align:center;">
+      <div id="row">
+        <div id="col">
+          <h2> You have selected scenic: </h2>
+        </div>
+        <div id="col">
+          <h2 id="selectedCounty"></h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-7">
+          <div class="row">
+            <div class="card">
+              <div class="card-body" style="width: 600px;">
+                <h4>Average SAT Score: County v. NJ</h4>
+                <div id="SAT-plot"></div>
+              </div>
+            </div>
+          </div>
+          <div class="row" style="margin-top: 20px; margin-bottom: 20px;">
+            <div class="card">
+              <h4>Median income by County</h4>
+              <div id="Income-plot"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-5">
+          <div class="card">
+            <div class="card-body">
+              <h4>Average Hospital Rating </h4>
+              <div id="hosp-county-plot"></div>
+              <div id="hosp-NJ-plot"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="row">
+        <div class="container">
+          <div class="card img-fluid">
+            <img class="card-img-top" src="../static/images/FlagNewJersey.jpg" alt="Card image" style="width:100%; opacity: 0.5">
+            <div class="card-img-overlay">
+              <h2 class="card-title" style="color: black;">County Report Card</h2>
+              <table class="table">
+                <tbody>
+                  <tr>
+                    <th>Average SAT Math Score </th>
+                    <td id="mathscr"> </td>
+                    <th>SAT Math Percentile </th>
+                    <td id="mathpercent"> </td>
+                  </tr>
+                  <tr>
+                    <th>Average SAT Reading & Writing Score </th>
+                    <td id="engscr"> </td>
+                    <th>SAT Reading & Writing Percentile </th>
+                    <td id="engpercent"> </td>
+                  </tr>
+                  <tr>
+                    <th>Median Income </th>
+                    <td id="incomemed"> </td>
+                    <th>Rank (out of 21) </th>
+                    <td id="incomerank"> </td>
+                  </tr>
+                  <tr>
+                    <th>Hospital Rating </th>
+                    <td id="hospitalrate"> </td>
+                    <th>Hospital Grade </th>
+                    <td id="grade"> </td>
+                  </tr>
+
+                </tbody>
+              </table>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="../static/js/config.js"></script>
+  <script src="https://unpkg.com/leaflet@1.3.3/dist/leaflet.js"
+    integrity="sha512-tAGcCfR4Sc5ZP5ZoVz0quoZDYX5aCtEm/eu1KhSLj2c9eFrylXZknQYmxUssFaVJKvvc0dJQixhGjG2yXWiV9Q=="
+    crossorigin=""></script>
+  <script src="../static/js/jquery-3.4.1.min.js"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="../static/js/visual.js"></script>
+  <script src="../static/js/logic.js"></script>
+  <script scr="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
