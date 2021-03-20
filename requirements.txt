@@ -14,7 +14,7 @@ gunicorn==19.9.0
 idna==2.8
 iso3166==1.0
 itsdangerous==1.1.0
-Jinja2==2.10.1
+Jinja2==2.11.3
 jmespath==0.9.4
 js.d3==3.5.5
 js.jquery==3.3.1
